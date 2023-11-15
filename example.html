@@ -3,34 +3,56 @@
     <head>
         <meta charset="UTF-8" />
         <title>Русь JS</title>
+
+        <style>
+            body {
+                background-color: #353535;
+                color: white;
+                text-align: center;
+            }
+
+            .btn {
+                width: 180px;
+                height: 60px;
+                cursor: pointer;
+                background: transparent;
+                border: 1px solid #91C9FF;
+                outline: none;
+                transition: 1s ease-in-out;
+            }
+
+            .btn span {
+                color: white;
+                font-size: 18px;
+                font-weight: 100;
+            }
+
+            .btn:hover {
+                transition: 1s ease-in-out;
+                background: #4F95DA;
+            }
+        </style>
     </head>
 
     <body>
 
         <h2>Мы сила, мы РУСЫ!</h2>
         <h2>Ящеры мы вас уничтожем.</h2>
+ 
+        <button class="btn" id="кнопочка"><span>Вывести приказ княжий</span></button>
 
-        <h2 id="русская-летопись"></h2>
+        <br><br>
+
+        <div id="русская-летопись"></div>
 
         <script language="Русь">
 
             царь_батюшка_главный.вперёд_славяне = внемлить() {
 
-                царь_батюшка_главный.молвить("Добро пожаловать в Русь JS!");
-                внедрить крыса = царь_батюшка_главный.проверка_на_ящера("Для начала вопрос: Ты ящер?");
-
-                ожидание_приказа(() => { 
-
-                    коли (крыса == правда) {
-                        царь_батюшка_главный.молвить("БРАТЬЯ БЕЙТЕ ЯЩЕРА!");
-
-                        Русь.поиск_дружины(id="русская-летопись").много_букав = "ВЫ НЕКОГДА НЕ ПОБЕДИТЕ";
-                    }
-                    отнюдь {
-                        Русь.поиск_дружины(id="русская-летопись").много_букав = "Время пить воду из Байкала";
-                    }
-
-                }, 750);
+                Русь.поиск_дружины("кнопочка").дело = function(){
+                    царь_батюшка_главный.молвить("Княже гласит бить ЯЩЕРОВ!");
+                    Русь.поиск_дружины("русская-летопись").перепись_указа = '<iframe width="560" height="315" src="https://www.youtube.com/embed/DUPk9vpaPEo?si=EosEuKDk3LH0T2-S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+                }
 
             }
         </script>
