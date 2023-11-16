@@ -198,8 +198,8 @@
                     a = n(o(326));
 
                 function i(e, t) {
-                    void 0 === t && (t = "рс");
-                    var o = "рс" === t ? 1 : 0;
+                    void 0 === t && (t = "rs");
+                    var o = "rs" === t ? 1 : 0;
                     return a.default.sort((function(e, t) {
                         var n = e[o].length;
                         return t[o].length - n
@@ -212,7 +212,7 @@
                 }
 
                 function l(e, t) {
-                    void 0 === t && (t = "рс");
+                    void 0 === t && (t = "rs");
                     var o = /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/g,
                         n = "ys_" + (new Date).getTime() + "_",
                         r = {},
@@ -225,7 +225,7 @@
                         })), r) e = e.replace(l, r[l]);
                     return e
                 }
-                t.compile = l, r.default().yopta = l
+                t.compile = l, r.default().rs = l
             },
             607: function(e, t, o) {
                 var n = this && this.__awaiter || function(e, t, o, n) {
@@ -332,7 +332,7 @@
                     };
                 Object.defineProperty(t, "__esModule", {
                     value: !0
-                }), t.yopta = void 0;
+                }), t.rs = void 0;
                 var a = o(776);
 
                 function i(e) {
@@ -345,7 +345,7 @@
                                 case 1:
                                     o = n.sent(), n.label = 2;
                                 case 2:
-                                    t = o, e.parentNode.removeChild(e), r = a.compile(t, "рс"), (i = document.createElement("script")).innerHTML = r, document.body.appendChild(i), n.label = 3;
+                                    t = o, e.parentNode.removeChild(e), r = a.compile(t, "rs"), (i = document.createElement("script")).innerHTML = r, document.body.appendChild(i), n.label = 3;
                                 case 3:
                                     return [2]
                             }
@@ -373,7 +373,7 @@
                         }))
                     }))
                 }
-                Object.defineProperty(t, "русь", {
+                Object.defineProperty(t, "rs", {
                     enumerable: !0,
                     get: function() {
                         return a.compile
