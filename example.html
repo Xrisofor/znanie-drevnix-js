@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8" />
-        <title>Русь JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Русь Великая!</title>
         <style>
             body {
-                background-color: #353535;
-                color: white;
-                text-align: center;
+                background: url('https://avatars.dzeninfra.ru/get-zen_doc/1389531/pub_61866a2ee883d3508fbb2ebb_618678643701114265388be0/scale_1200') no-repeat center center fixed;
+                background-size: cover;
+                color: #F4EBD0;
+                font-family: 'Georgia', serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+                margin-top: 30px;
+                text-shadow: 3px 3px 8px #000;
+            }
+
+            p {
+                font-size: 1.2rem;
+                text-shadow: 1px 1px 3px #000;
+                margin: 20px;
+                max-width: 800px;
+                line-height: 1.8;
+            }
+
+            .scroll {
+                max-height: 400px;
+                overflow-y: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+                border: 2px solid #C0A080;
+                margin: 20px 0;
+                text-align: left;
             }
 
             button {
-                width: 180px;
-                height: 60px;
+                background: #8B0000;
+                color: #F4EBD0;
+                font-size: 1.2rem;
+                padding: 15px 30px;
+                border: 3px solid #FFD700;
+                border-radius: 10px;
                 cursor: pointer;
-                background: transparent;
-                border: 1px solid #91C9FF;
-                outline: none;
-                transition: 1s ease-in-out;
-            }
-
-            button span {
-                color: white;
-                font-size: 18px;
-                font-weight: 100;
+                margin-top: 20px;
+                transition: transform 0.2s, background 0.5s;
             }
 
             button:hover {
-                transition: 1s ease-in-out;
-                background: #4F95DA;
+                background: #FFD700;
+                color: #8B0000;
+                transform: scale(1.1);
+            }
+
+            a {
+                color: #FFD700;
+                font-size: 1.2rem;
+                margin-top: 20px;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            a:hover {
+                color: #F4EBD0;
             }
         </style>
     </head>
-
     <body>
+        <h1>Русь Великая</h1>
+        <p>Добро пожаловать, славный витязь! Здесь ты можешь ознакомиться с летописью нашей славной земли, узнать волю князя и отдать приказ дружине!</p>
 
-        <h2>Мы сила, мы РУСЫ!</h2>
-        <h2>Ящеры мы вас уничтожем.</h2>
- 
-        <button id="кнопочка"><span>Вывести приказ княжий</span></button>
+        <div class="scroll" id="chronicle">
+            <p>Заповедано нам, русичам, чтить Перуна, Землю Русскую и беречь единство народа!</p>
+        </div>
 
-        <br><br>
+        <button id="addEntry">Добавить запись</button>
+        <button id="princeOrder">Воля князя</button>
 
-        <div id="русская-летопись"></div>
+        <a href="https://www.youtube.com/watch?v=DUPk9vpaPEo?si=EosEuKDk3LH0T2-S" target="_blank">Смотреть летописи на YouTube</a>
 
         <script language="Русь">
             царь_батюшка_главный.вперёд_славяне = внемлить() {
+                внедрить chronicle = Русь.поиск_дружины('chronicle');
+                внедрить addEntry = Русь.поиск_дружины('addEntry');
+                внедрить princeOrder = Русь.поиск_дружины('princeOrder');
 
-                Русь.поиск_дружины("кнопочка").дело = внемлить() {
-                    царь_батюшка_главный.молвить("Княже гласит бить ЯЩЕРОВ!");
-                    семейство.исповедать("Когда-то на это сделают обновления");
-                    Русь.поиск_дружины("русская-летопись").перепись_указа = '<iframe width="560" height="315" src="https://www.youtube.com/embed/DUPk9vpaPEo?si=EosEuKDk3LH0T2-S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-                }
+                addEntry.приток_Байкала('click', () => {
+                    внедрить newEntry = Русь.createElement('p');
+                    newEntry.textContent = 'Новое событие добавлено: дружина одолела ящеров у Лесного озера!';
+                    chronicle.appendChild(newEntry);
+                    chronicle.scrollTop = chronicle.scrollHeight;
+                });
+
+                princeOrder.приток_Байкала('click', () => {
+                    alert('Князь приказал: Собрать дружину и подготовиться к походу на юг!');
+                });
             }
         </script>
 
         <script type="text/javascript" charset="utf-8" src="es.js"></script>
-
     </body>
-
 </html>
