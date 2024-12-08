@@ -77,30 +77,30 @@
         <h1>Русь Великая</h1>
         <p>Добро пожаловать, славный витязь! Здесь ты можешь ознакомиться с летописью нашей славной земли, узнать волю князя и отдать приказ дружине!</p>
 
-        <div class="scroll" id="chronicle">
+        <div class="scroll" id="летопись">
             <p>Заповедано нам, русичам, чтить Перуна, Землю Русскую и беречь единство народа!</p>
         </div>
 
-        <button id="addEntry">Добавить запись</button>
-        <button id="princeOrder">Воля князя</button>
+        <button id="добавить_запись">Добавить запись</button>
+        <button id="воля_князя">Воля князя</button>
 
         <a href="https://www.youtube.com/watch?v=DUPk9vpaPEo?si=EosEuKDk3LH0T2-S" target="_blank">Смотреть летописи на YouTube</a>
 
         <script language="Русь">
             царь_батюшка_главный.вперёд_славяне = внемлить() {
-                внедрить chronicle = Русь.поиск_дружины('chronicle');
-                внедрить addEntry = Русь.поиск_дружины('addEntry');
-                внедрить princeOrder = Русь.поиск_дружины('princeOrder');
+                внедрить chronicle = Русь.поиск_дружины('летопись');
+                внедрить addEntry = Русь.поиск_дружины('добавить_запись');
+                внедрить princeOrder = Русь.поиск_дружины('воля_князя');
 
                 addEntry.приток_Байкала('click', () => {
-                    внедрить newEntry = Русь.createElement('p');
-                    newEntry.textContent = 'Новое событие добавлено: дружина одолела ящеров у Лесного озера!';
-                    chronicle.appendChild(newEntry);
+                    внедрить newEntry = Русь.свет_мой_зеркальце('p');
+                    newEntry.много_букав = 'Новое событие добавлено: дружина одолела ящеров у Лесного озера!';
+                    chronicle.добрый_молодец(newEntry);
                     chronicle.scrollTop = chronicle.scrollHeight;
                 });
 
                 princeOrder.приток_Байкала('click', () => {
-                    alert('Князь приказал: Собрать дружину и подготовиться к походу на юг!');
+                    молвить('Князь приказал: Собрать дружину и подготовиться к походу на юг!');
                 });
             }
         </script>
